@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
 }, false);
 
 function task1() {
+    subtask1();
     subtask5();
 
 }
 
-function renderToHTML(result) {
-    let pElem = document.createElement('p');
+function renderToHTML(result, elem) {
+    let pElem = document.createElement(elem);
     pElem.textContent = result;
     //document.body.appendChild(pElem);
     document.getElementById("container").appendChild(pElem);
@@ -18,10 +19,11 @@ function renderToHTML(result) {
 
 
 function subtask1() {
+    renderToHTML('Subtask1: reminder', 'p');
     let a = 3;
     let b = 10;
     console.log(`remainder of (${b} % ${a}) is: ${b % a}`);
-    renderToHTML(`remainder of (${b} % ${a}) is: ${b % a}`);
+    renderToHTML(`remainder of (${b} % ${a}) is: ${b % a}`, 'p');
 }
 
 function getValidFibQuantity() {
@@ -33,35 +35,17 @@ function getValidFibQuantity() {
 }
 
 function subtask5() {
+    renderToHTML('Subtask5: fibonacci', 'p');
     let enteredFibQuantity = getValidFibQuantity();
-    const fibSequenceStartNumbers = [0, 1];
-    const startNumbersQuantity = fibSequenceStartNumbers.length;
-    let initialQuantity = enteredFibQuantity < startNumbersQuantity ? enteredFibQuantity : startNumbersQuantity;
-    let count = 0;
-    for (; count < initialQuantity; count++) {
-        console.log(count + ': ' + fibSequenceStartNumbers[count]);
-    }
 
-    let prevFibNum = 0n;
-    let currFibNum = 1n;
-    for (; count <= enteredFibQuantity; count++) {
-        let temp = currFibNum;
-        currFibNum += prevFibNum;
-        prevFibNum = temp;
+    let currFibNum = 0n;
+    let nextFibNum = 1n;
+    for (let count = 0; count <= enteredFibQuantity; count++) {
         console.log(count + ': ' + currFibNum);
+        renderToHTML(count + ': ' + currFibNum, 'span');
+        let temp = nextFibNum;
+        nextFibNum += currFibNum;
+        currFibNum = temp;
+
     }
-
-   /* for (let count = 0; count <= fibQuantity; count++) {
-        if (currFibNum < 2) { // for first two positive fib nums
-            console.log(count + ': ' + prevFibNum);
-            count++;
-        }
-        let temp = currFibNum;
-        currFibNum += prevFibNum;
-        prevFibNum = temp;
-        if (count <= fibQuantity) { // for case when fibQuantity < 3
-            console.log(count + ': ' + currFibNum);
-        }
-    }*/
-
 }
