@@ -41,7 +41,7 @@ function subtask1() {
 
 function subtask2() {
     renderToHTML('Subtask2: 2 reduce to 10 degree', 'h2');
-    let result = 2 / 10000000000;
+    let result = 2 / 1e10;
     console.log('2 reduce to 10 degree = ' + result);
     renderToHTML('result is: ' + result, 'span');
 }
