@@ -1,4 +1,5 @@
 /*
+Task 3
 1) Given object { js: ['I', 'Angular', 'nodeJS'], php: 'love', css: 'world' }.
 Log the sentence "I love nodejs" with it.
 2) Given the object {q: null w: null e: null r: null t: null y: null}  make a string from the keys of this object.
@@ -110,17 +111,18 @@ function subtask4(object1, object2) {
 
 function task3() {
     const testObject1 = {js: ['I', 'Angular', 'nodeJS'], php: 'love', css: 'world'};
-    console.log(subtask1(testObject1));
+    console.log('\nSubtask 1: replace specified element:\n' + subtask1(testObject1));
 
     const testObject2 = {q: null, w: null, e: null, r: null, t: null, y: null};
-    console.log(subtask2(testObject2));
-    console.log(subtask2Ver2(testObject2));
-    console.log(subtask2Ver3(testObject2));
-    console.log(subtask3());
+    console.log('\nSubtask 2: Compose sentence from keys. Version 1:\n' + subtask2(testObject2));
+    console.log('\nSubtask 2: Compose sentence from keys. Version 2:\n' + subtask2Ver2(testObject2));
+    console.log('\nSubtask 2: Compose sentence from keys. Version 3:\n' + subtask2Ver3(testObject2));
+    console.log('\nSubtask 3: Week working days:\n');
+    console.log(subtask3());;
 
-    const testCompareObject1 = subtask3(7);
-    const testCompareObject2 = subtask3(4);
-    console.log(subtask4(testCompareObject1, testCompareObject2));
+    const testCompareObject1 = subtask3(7); // create different objects
+    const testCompareObject2 = subtask3(4); // create different objects
+    console.log('\nSubtask 4: Is objects are equals? :\n' + subtask4(testCompareObject1, testCompareObject2));
 
 }
 

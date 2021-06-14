@@ -1,12 +1,11 @@
-/* Task2
-* 1) Given the string 'aaa @ bbb @ ccc'. Replace all @ with '!'.
+/* Task 2
+1) Given the string 'aaa @ bbb @ ccc'. Replace all @ with '!'.
 2) Write a function that converts a string to an array of words.
 3) Given the line 'I-know-javascript!'. Replace all with '!'
 4) Given an array ['I', 'know', 'javascript', '!']. Use the join method to convert the array to the string
  'I learning javascript +!'. And make the first letter capitalized.
 5) Write a function that takes a string and determines whether it is a palindrome
-*
-* */
+*/
 
 'use strict'
 
@@ -75,7 +74,7 @@ function subtask4(arrayToConvert = [], pairsForReplace = {}) {
 }
 
 /**
- *
+ * reverse string
  * @param str string for reverse
  * @returns {string} reversed string
  */
@@ -84,7 +83,7 @@ function reverseString(str) {
 }
 
 /**
- *
+ * Test string as palindrome
  * @param str string for palindrome testing
  * @returns {boolean} palingrome test result
  */
