@@ -32,7 +32,9 @@ function subtask2(composedObject) {
 function subtask2Ver2(composedObject) {
     let resultSentence = '';
     for (const composedObjectKey in composedObject) {
-        resultSentence += composedObjectKey;
+        if (composedObject.hasOwnProperty(composedObjectKey)) {
+            resultSentence += composedObjectKey;
+        }
     }
     return resultSentence;
 }
@@ -83,13 +85,13 @@ function isEqual(o1, o2) {
         return false;
     }
     for (const key in o1) {
-        if (o1.hasOwnProperty(key) && o2.hasOwnProperty(key)) {
+        if (o1.hasOwnProperty(key)) {
             if (isObject(o1[key])) {
-                if (!isEqual(o1[key], o2[key])) {
+                if (!isObject(o2[key]) || !isEqual(o1[key], o2[key])) {
                     return false;
                 }
             } else {
-                if (o1[key] !== o2[key]) {
+                if (isObject(o2[key]) || (o1[key] !== o2[key] && !(Number.isNaN(o1[key]) && Number.isNaN(o2[key])))) {
                     return false;
                 }
             }
@@ -99,7 +101,8 @@ function isEqual(o1, o2) {
 }
 
 /**
- * function that deep compares two objects, delegate task for another fn with semantic relevant name.
+ * function that deep compares two objects, delegate task for another fn with semantic relevant name,
+ * for recursively call
  * @param object1
  * @param object2
  * @returns {boolean}
@@ -118,10 +121,12 @@ function task3() {
     console.log('\nSubtask 2: Compose sentence from keys. Version 2:\n' + subtask2Ver2(testObject2));
     console.log('\nSubtask 2: Compose sentence from keys. Version 3:\n' + subtask2Ver3(testObject2));
     console.log('\nSubtask 3: Week working days:\n');
-    console.log(subtask3());;
+    console.log(subtask3());
 
     const testCompareObject1 = subtask3(7); // create different objects
+    testCompareObject1['nan'] = NaN; // add equevalent trick property
     const testCompareObject2 = subtask3(4); // create different objects
+    testCompareObject2['nan'] = NaN; // add equevalent trick property
     console.log('\nSubtask 4: Is objects are equals? :\n' + subtask4(testCompareObject1, testCompareObject2));
 
 }
