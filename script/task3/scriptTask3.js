@@ -75,7 +75,7 @@ function isObject(object) {
 }
 
 /**
- * Recursive function that deep compare two objects
+ * Recursive function for deep comparing two objects
  * @param o1
  * @param o2
  * @returns {boolean} compare result
