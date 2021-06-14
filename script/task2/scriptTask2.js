@@ -106,11 +106,14 @@ function task2() {
     const testPairsForReplace = {'know': 'learning', '!': '+!'};
     const testPalindromePhrase = 'Never odd or even';
 
-    console.log(subtask1(testString1, '@', '!'));
+    console.log('\nSubtask 1: replace @ to !\n' + subtask1(testString1, '@', '!'));
+
+    console.log('\nSubtask 2: array from string\n');
     console.log(subtask2(testString2));
-    console.log(subtask3(testString3, /./, '!'));
-    console.log(subtask4(testArray4, testPairsForReplace));
-    console.log(`Is the phrase: "${testPalindromePhrase}" a palindrome? It is ${subtask5(testPalindromePhrase)}`);
+
+    console.log('\nSubtask 3: replace all to !\n' + subtask3(testString3, /./, '!'));
+    console.log('\nSubtask 4: string to array with partial replace \n' + subtask4(testArray4, testPairsForReplace));
+    console.log('\nSubtask 5:\n' + `Is the phrase: "${testPalindromePhrase}" a palindrome? It is ${subtask5(testPalindromePhrase)}!`);
 }
 
 task2();
