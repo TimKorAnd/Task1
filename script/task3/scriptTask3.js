@@ -120,8 +120,9 @@ function task3() {
     console.log('\nSubtask 2: Compose sentence from keys. Version 1:\n' + subtask2(testObject2));
     console.log('\nSubtask 2: Compose sentence from keys. Version 2:\n' + subtask2Ver2(testObject2));
     console.log('\nSubtask 2: Compose sentence from keys. Version 3:\n' + subtask2Ver3(testObject2));
-    console.log('\nSubtask 3: Week working days:\n');
+    console.group('\nSubtask 3: Week working days:\n');
     console.log(subtask3());
+    console.groupEnd();
 
     const testCompareObject1 = subtask3(7); // create different objects
     testCompareObject1['nan'] = NaN; // add equevalent trick property

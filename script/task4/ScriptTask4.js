@@ -8,6 +8,8 @@ Working with Array:
 array which have two elements ['learn', 'nodejs'].
 4 *) Given the 2nd array: [1,2,3,4,5,6] and [5,6,7,8,9]. Find all unique elements.
 5 *) Given object {js: 'test', jq: 'hello', css: 'world'}. Get an array of its keys, and an array of its value,*/
+'use strict'
+
 /**
  *  Combine two arrays, and last element
  * @param arr1
@@ -83,32 +85,40 @@ function getKeysAndValuesArrays(obj) {
     return {keys: Object.keys(obj), values: Object.values(obj)};
 }
 
+/**
+ * subtask caller
+ */
 function task4() {
     const testTask1Arr1 = ['a', 'b', 'c'];
     const testTask1Arr2 = [1, 2, 3];
     const testLastElement = 111;
     const testFirstElement = 'first';
-    console.log('\nSubtask 1: Combine two arrays, add last element:\n')
+    console.group('\nSubtask 1: Combine two arrays, add last element:\n')
     console.log(subtask1(testTask1Arr1, testTask1Arr2, testLastElement));
     console.log(multiConcat(testFirstElement, testTask1Arr1, testTask1Arr2, testLastElement, testTask1Arr2));
     console.log(flatArray(testFirstElement, [...testTask1Arr1, [testTask1Arr2, testTask1Arr1]], testTask1Arr2, testLastElement, testTask1Arr2));
+    console.groupEnd();
 
     const testTask2Arr = [1, 2, 3];
-    console.log('\nSubtask 2: Get new reversed array from passed one\n')
+    console.group('\nSubtask 2: Get new reversed array from passed one\n')
     console.log(subtask2(testTask2Arr));
+    console.groupEnd();
 
     const testTask3Arr = ['learn', 'css', 'nodejs'];
-    console.log('\nSubtask 3: Get & display new array from passed one, by shift & pop\n')
+    console.group('\nSubtask 3: Get & display new array from passed one, by shift & pop\n')
     console.log(subtask3(testTask3Arr));
+    console.groupEnd();
 
     const testTask4Arr1 = [1, 2, 3, 4, 5, 6];
     const testTask4Arr2 = [5, 6, 7, 8, 9];
-    console.log('\nSubtask 4: Get arrays from unique elements of another arrays:\n')
+    console.group('\nSubtask 4: Get arrays from unique elements of another arrays:\n')
     console.log(getUniqueElementsArray(testTask4Arr1, testTask4Arr2));
+    console.groupEnd();
 
     const testTask5Obj = {js: 'test', jq: 'hello', css: 'world'};
-    console.log('\nSubtask 5: Get an array of its keys, and an array of its values:\n')
-    console.log(getKeysAndValuesArrays(testTask5Obj));
+    console.group('\nSubtask 5: Get an array of its keys, and an array of its values:\n')
+    console.dir(getKeysAndValuesArrays(testTask5Obj));
+    console.groupEnd();
 }
 
 task4();
