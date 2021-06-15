@@ -66,7 +66,7 @@ function subtask4(arrayToConvert = [], pairsForReplace = {}) {
     Object.keys(pairsForReplace).forEach(itemForReplace => {
         modifyArray.forEach((elem, index, array) => {
             if (elem === itemForReplace) {
-                modifyArray[index] = pairsForReplace[itemForReplace];
+                array[index] = pairsForReplace[itemForReplace];
             }
         })
     });
@@ -116,3 +116,4 @@ function task2() {
 }
 
 task2();
+

@@ -1,9 +1,9 @@
-Task #1
+Internship NodeJS
 ментор Олексій Моторний
 виконавець Корнієць Артьом
 Working with Number:
 
-
+Task #1
 1) Given the variables a = 10 and b = 3. Find the remainder of dividing a by b.
 2) Reduce 2 to 10 degrees. Write the result in the variable st.
 3) Display a random integer from 1 to 100.

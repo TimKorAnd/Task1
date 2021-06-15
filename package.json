@@ -1,0 +1,24 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "description": "Internship Tasks.  ментор Олексій Моторний, виконавець Корнієць Артьом:",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimKorAnd/timkorand.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimKorAnd/timkorand.github.io/issues"
+  },
+  "homepage": "https://github.com/TimKorAnd/timkorand.github.io#readme",
+  "devDependencies": {
+    "eslint": "^7.28.0"
+  }
+}
