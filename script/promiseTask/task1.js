@@ -33,7 +33,7 @@ const object = {
 };
 const numbers = [];
 
-Object.keys(object).map((item) => {
+Object.keys(object).forEach((item) => {
     if (typeof object[item] === 'number') {
         numbers.push(object[item]);
     }

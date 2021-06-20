@@ -9,7 +9,6 @@ function callApi(){
 // errors
         })
 }*/
-'use strict';
 const fetch = require('node-fetch');
 const objectEqualiter = require('../arrayAndObjctsTasks/task3/scriptTask3')
 const testUser = {name: 'TimKorAnd'}
