@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Internship Tasks.  ментор Олексій Моторний, виконавець Корнієць Артьом:",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TimKorAnd/timkorand.github.io#readme",
   "devDependencies": {
-    "eslint": "^7.28.0"
+    "eslint": "^7.28.0",
+    "node-fetch": "^2.6.1"
   }
 }

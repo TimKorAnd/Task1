@@ -132,4 +132,7 @@ function task3() {
 
 }
 
-task3();
+// task3();
+
+exports.isObject = isObject;
+exports.isEqual = isEqual;
