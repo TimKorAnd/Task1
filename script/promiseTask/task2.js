@@ -59,7 +59,7 @@ Promise // A
 Promise // B
     .resolve(promiseProgressLog(null,'PromiseB')) //  1) return PromiseA and push it to PromiseJobs (microtask queue with FIFO principle)
     // B1
-    .then(() => console.log(promiseProgressLog('PromiseB', 'thenB1'), 4)) // add a thenA1 (it`s a promise too) to tail of queue
+    .then(() => console.log(promiseProgressLog('PromiseB', 'thenB1'), 4)) // add a thenB1 (it`s a promise too) to tail of queue
     // B2
     .then(() => console.log(promiseProgressLog('thenB1','thenB2'), 5))
     // B3
