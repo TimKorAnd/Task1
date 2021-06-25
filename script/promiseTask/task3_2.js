@@ -56,9 +56,9 @@ async function callApiViaAsyncAwait(username) {
 const userObject2 = callApiViaAsyncAwait(testUser.name);
 (async () => {
     if (objectEqualiter) {
-        console.log('Does fetched users equals? ' + objectEqualiter.isEqual(await userObject1, await userObject2));
+        console.log('Does fetched users equals (deep compare)? ' + objectEqualiter.isEqual(await userObject1, await userObject2));
     } else {
-        console.log('Does fetched users equals? ' + (JSON.stringify(await userObject1) === JSON.stringify(await userObject2)));
+        console.log('Does fetched users equals? (shallow compare) ' + (JSON.stringify(await userObject1) === JSON.stringify(await userObject2)));
     }
 })();
 
