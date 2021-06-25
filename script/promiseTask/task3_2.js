@@ -10,8 +10,15 @@ function callApi(){
         })
 }*/
 const fetch = require('node-fetch');
-const objectEqualiter = require('../arrayAndObjctsTasks/task3/scriptTask3')
 const testUser = {name: 'TimKorAnd'}
+let objectEqualiter;
+try {
+    objectEqualiter = require('../arrayAndObjctsTasks/task3/scriptTask13')
+} catch (err) {
+    console.warn('Some modules does`t required, full functionality may be unavailable.')
+} finally {
+    console.log('But still all must works correct!');
+}
 
 /**
  * get user data from amazing github endpoint via promise syntax
@@ -48,7 +55,11 @@ async function callApiViaAsyncAwait(username) {
 }
 const userObject2 = callApiViaAsyncAwait(testUser.name);
 (async () => {
+    if (objectEqualiter) {
         console.log('Does fetched users equals? ' + objectEqualiter.isEqual(await userObject1, await userObject2));
+    } else {
+        console.log('Does fetched users equals? ' + (JSON.stringify(await userObject1) === JSON.stringify(await userObject2)));
+    }
 })();
 
 
